@@ -18,22 +18,22 @@ $curriculum-accent: mat-palette($mat-pink, A200, A100, A400);
 // The warn palette is optional (defaults to red).
 $curriculum-warn: mat-palette($mat-red);
 
-// Create the theme object (a Sass map containing all of the palettes).
-$curriculum-theme: mat-light-theme($curriculum-primary, $curriculum-accent, $curriculum-warn);
+@media (prefers-color-scheme: light) {
+    // Create the theme object (a Sass map containing all of the palettes).
+    $curriculum-theme: mat-light-theme($curriculum-primary, $curriculum-accent, $curriculum-warn);
+    @include angular-material-theme($curriculum-theme);
+}
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($curriculum-theme);
+@media (prefers-color-scheme: dark) {
+    // Create the theme object (a Sass map containing all of the palettes).
+    $curriculum-theme: mat-dark-theme($curriculum-primary, $curriculum-accent, $curriculum-warn);
+    @include angular-material-theme($curriculum-theme);
+}
 
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.mat-app-background {
-    background-color: #C5CAE9;
-}
 
 a {
     text-decoration: none;
