@@ -2,6 +2,9 @@ module.exports = {
     purge: [],
     darkMode: false, // or 'media' or 'class'
     important: true,
+    purge: [
+        './src/**/*.html'
+    ],
     theme: {
         extend: {},
         maxWidth: {
@@ -18,7 +21,7 @@ module.exports = {
             '7': '1.75rem',
             '8': '2rem',
             '9': '2.25rem',
-            '10':'2.5rem',
+            '10': '2.5rem',
             '11': '2.75rem',
             '12': '3rem',
             '14': '3.5rem',
