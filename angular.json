@@ -61,7 +61,11 @@
                                     "maximumWarning": "6kb",
                                     "maximumError": "10kb"
                                 }
-                            ]
+                            ],
+                            "index": {
+                                "input": "src/index.html",
+                                "output": "404.html"
+                            }
                         }
                     }
                 },
