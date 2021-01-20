@@ -6,7 +6,11 @@ module.exports = {
         './src/**/*.html'
     ],
     theme: {
-        extend: {},
+        extend: {
+            screens: {
+                'print': { 'raw': 'print' }
+            }
+        },
         maxWidth: {
             '0': '0px',
             '0.5': '0.125rem',
